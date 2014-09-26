@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>PAPERPROTO //  The Ultimate Paper Prototype Tool</title>
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" href="css/normalize.css" />
+		<link rel="stylesheet" href="css/foundation.css">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/style.css" />
+		<script src="js/modernizr.custom.js"></script>
+		<!--[if IE]>
+  		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+
+		<div class="landing">
+			<video autoplay="on" loop="on">
+			  	<source src="img/paperproto_v1.mp4" type="video/mp4">
+			  	<source src="img/paperproto_v1.mp4" type="video/webm">
+			</video>
+
+			<div id="content" class="row">
+			  	<section class="six columns centered">
+			  		<h1>PAPER<span>PROTO</span></h1>
+	            </section>
+
+            	<section class="eight columns centered">
+            		<p>Paper prototyping is a efficient way
+ 						to quickly express your vision in a way that is in perspective to real use while promoting an agile workflow. Inspired by the Internet famous IronPhone (a href to this link - https://dribbble.com/shots/974256-ironPhone-custom-made-sketch-preview-tool)
+ 						we thought there was surely a 3D printable model to use for paper prototyping, but there was none. So, we made it. The .ZIP file contains the .STL and .PDF so you can get started quickly mocking up awesome mobile experiences.</p>
+            	</section>
+
+            	<section class="five columns centered">
+            		<button>DOWNLOAD</button>
+            		<button>BUY</button>
+            	</section>
+            	
+			</div><!-- end content -->
+		</div><!-- end wrapper -->
+
+		<!-- JavaScript -->
+		<script>
+			$(function() {
+			  $('a[href*=#]:not([href=#])').click(function() {
+			    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			      var target = $(this.hash);
+			      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			      if (target.length) {
+			        $('html,body').animate({
+			          scrollTop: target.offset().top
+			        }, 1000);
+			        return false;
+			      }
+			    }
+			  });
+			});
+    	</script>
+	</body>
+</html>
