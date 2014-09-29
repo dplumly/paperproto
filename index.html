@@ -4,14 +4,24 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1"> 
-		<title>PAPERPROTO //  The Ultimate Paper Prototype Tool</title>
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<meta name="author" content="Codrops" />
+		<title>PAPERPROTO</title>
+		<meta name="description" content="The ultimate paper prototyping tool for UX designers to agilely design for mobile products. A 3D printed tool and paper template designed for speeding up workflow." />
+		<meta name="keywords" content="UX, Experience Design, Tool, Prototyping, 3D Printing, Template, Rapid Prototyping, Agile Design, Interaction Design, Product Design, App Development" />
+		<meta property=”og:title” content=”Paperproto Is A Rapid Mobile Prototyping Tool For UX Designers”/>
+		<meta property=”og:type” content=”Product”/>
+		<meta property=”og:image” content=”http://i1264.photobucket.com/albums/jj493/reamermd/paperproto_square_social_post_zps3cb4cca1.jpg”/>
+		<meta property=”og:url” content=”http://www.paperproto.com”/>
+		<meta property=”og:description” content=”The ultimate paper prototyping tool for UX designers to agilely design for mobile products. A 3D printed tool and paper template designed for speeding up workflow.”/>
+		<meta name=”twitter:card” content=”summary”>
+		<meta name=”twitter:url” content=”http://www.paperproto.com”>
+		<meta name=”twitter:title” content=”Paperproto Is A Rapid Mobile Prototyping Tool For UX Designers”>
+		<meta name=”twitter:description” content=”The ultimate paper prototyping tool for UX designers to agilely design for mobile products. A 3D printed tool and paper template designed for speeding up workflow.”>
+		<meta name=”twitter:image” content=”http://i1264.photobucket.com/albums/jj493/reamermd/paperproto_square_social_post_zps3cb4cca1.jpg”>
+		<meta name="author" content="Donnie Plumly / Matt Reamer" />
+		<link rel=”author” href=”https://plus.google.com/u/0/111945287712150510058/posts]“/>
 		<link rel="shortcut icon" href="../favicon.ico">
 		<link rel="stylesheet" href="css/normalize.css" />
 		<link rel="stylesheet" href="css/foundation.css">
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="css/style.css" />
 		<script src="js/modernizr.custom.js"></script>
 		<!--[if IE]>
@@ -20,10 +30,40 @@
 	</head>
 	<body>
 
+		<!-- Facebook API -->
+		<div id="fb-root"></div>
+
+		<script>
+		  (function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+		  fjs.parentNode.insertBefore(js, fjs);
+		  }(document, 'script', 'facebook-jssdk'));
+		</script>
+		<!-- End Facebook API Pull -->
+
 		<div class="landing">
-			<video autoplay="on" loop="on">
+
+			<section class="social">
+				<div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/"></div>
+				<a class="twitter-share-button"
+						  href="https://twitter.com/share"
+						  data-url="paperproto.com"
+  						  data-via="theream"
+ 						  data-text="The ultimate paper prototyping tool for UX designers to agilily design for mobile products.">
+						Tweet
+					</a>
+					<script type="text/javascript">
+						window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
+					</script>
+			</section>
+
+			<video autoplay="on" loop="on" muted>
 			  	<source src="img/paperproto_v1.mp4" type="video/mp4">
-			  	<source src="img/paperproto_v1.mp4" type="video/webm">
+			  	<source src="img/paperproto_v1.webm" type="video/webm">
+			  	<img src="img/paperproto_4_web.jpg" title="Your browser does not support the <video> tag">
 			</video>
 
 			<div id="content" class="row">
@@ -33,20 +73,107 @@
 
             	<section class="twelve columns centered">
             		<p>Paper prototyping is a efficient way
- 						to quickly express your vision in a way that is in perspective to real use while promoting an agile workflow. Inspired by the Internet famous IronPhone (a href to this link - https://dribbble.com/shots/974256-ironPhone-custom-made-sketch-preview-tool)
- 						we thought there was surely a 3D printable model to use for paper prototyping, but there was none. So, we made it. The .ZIP file contains the .STL and .PDF so you can get started quickly mocking up awesome mobile experiences.</p>
+ 						to quickly express your vision in a way that is in perspective to real use while promoting an agile workflow. Inspired by the Internet famous <a href="https://dribbble.com/shots/974256-ironPhone-custom-made-sketch-preview-tool" target="_blank">IronPhone</a> we thought there was surely a 3D printable model to use for paper prototyping, but there was none. <strong> So, we made it. </strong> The .ZIP file contains the .STL and .PDF so you can get started quickly mocking up awesome mobile experiences.</p>
             	</section>
 
-            	<section class="five columns centered">
-            		<button>DOWNLOAD</button>
-            		<button>BUY</button>
+            	<section class="four columns centered buttons">
+            		<a href="img/paperproto_v1.zip"><button>DOWNLOAD</button></a>
+            		<a href="http://www.shapeways.com/" target="_blank"><button>BUY</button></a>
             	</section>
-            	
-			</div><!-- end content -->
+
+			</div><!-- end landing -->
+
+			<a href="#about" class="arrow">
+				<!-- <p>WHY?</p> -->
+				<img src="img/arrow.png"></img>
+			</a>
+
 		</div><!-- end wrapper -->
 
+
+		<div class="about" id="about">
+
+		   <div class="row">
+
+		   		<div class="four columns" style="margin-top: 58px;">  
+	           		<img class="aboutImage" src="img/perspective.png"></img>
+	           		<h4 class="aboutH" style="margin-top: 34px;"> PERSPECTIVE </h4>
+	           		<p class="aboutP"> 
+           				Putting perspective and actually in mobile size constraintes is really important. It’s the first step in crafting a proper digital experience.  
+           			</p>
+           		</div>
+
+           		<div class="four columns aboutContent" style="margin-top: 58px;">  
+	           		<img class="aboutImage" src="img/interactive.png"></img>
+	           		<h4 class="aboutH"> INTERACTION DESIGN </h4>
+	           		<p class="aboutP"> 
+           				The ability to quickly study navigation and animations by having slots in the top and bottom. The templates allows for quick  content management and design.
+					</p>
+           		</div>
+
+           		<div class="four columns aboutContent" style="margin-bottom: 58px; margin-top: 58px;">  
+	           		<img class="aboutImage" src="img/agile.png"></img>
+	           		<h4 class="aboutH"> AGILE WORKFLOW </h4>
+	           		<p class="aboutP">
+           				Drawing has a different psychology than jumping right into digital work. It's easily disposable. Showing teammates paper prototypes allows for easy changes and input.
+           			</p>
+           		</div>
+
+           </div><!-- end content -->
+
+           <a href="#instructions">
+				<img class="arrowBlack" src="img/arrowBlack.png"></img>
+			</a>
+
+		</div><!-- end wrapper -->
+
+
+		<div class="instructions" id="instructions">
+
+		   <div class="row">
+
+           </div>
+		</div><!-- end wrapper -->
+
+		<footer>
+		  <div class="row">
+			<div class="six columns">
+				<h3>ABOUT <span> US</span></h3>
+				<p id="footerAbout">
+					Drawing has a different psychology than jumping right into digital work. It's easily disposable. Showing teammates paper prototypes allows for easy changes and input.
+				</p>
+				<ul class="footerSocial" style="text-align: left;">
+					<a href="donnieplumly.com" target="_blank"><li><span class="entypo-facebook-circled"></span><li></a>
+					<a href="donnieplumly.com" target="_blank"><li><span class="entypo-inbox"></span><li></a>
+					<a href="donnieplumly.com" target="_blank"><li><span class="entypo-linkedin-circled"></span><li></a>
+					<a href="donnieplumly.com" target="_blank"><li><span class="entypo-github-circled"></span><li></a>
+				</ul>
+			</div>
+			<div class="six columns">
+				<section class="buttons" style="margin-top: 65px;">
+            		<a href="img/paperproto_v1.zip"><button>DOWNLOAD</button></a>
+            		<a href="http://www.shapeways.com/" target="_blank"><button>BUY</button></a>
+            	</section>
+				<!-- <ul class="footerSocial">
+					<a href="iamtheream.io" target="_blank"><li><span class="entypo-facebook-circled"></span><li></a>
+					<a href="iamtheream.io" target="_blank"><li><span class="entypo-inbox"></span><li></a>
+					<a href="iamtheream.io" target="_blank"><li><span class="entypo-linkedin-circled"></span><li></a>
+					<a href="iamtheream.io" target="_blank"><li><span class="entypo-github-circled"></span><li></a>
+				</ul> -->
+			</div>
+		  </div>
+			<p class="copyright">
+				COPYRIGHT 2014
+				<br>
+				<a href="donnieplumly.com" target="_blank"><span> Donnie Plumly </span></a>
+				&amp; 
+				<a href="iamtheream.io" target="_blank"><span> Matt Reamer </span></a>
+			</p>
+		</footer>
+
 		<!-- JavaScript -->
-		<script>
+
+    <script>
 			$(function() {
 			  $('a[href*=#]:not([href=#])').click(function() {
 			    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -61,6 +188,7 @@
 			    }
 			  });
 			});
-    	</script>
+    </script>
+
 	</body>
 </html>

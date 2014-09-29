@@ -17,7 +17,7 @@
 .column, .columns { float: left; min-height: 1px; padding: 10px 10px; position: relative; }
 .column.centered, .columns.centered { float: none; margin: 0 auto; }
 
-[class*="column"] + [class*="column"]:last-child { float: right; }
+/* [class*="column"] + [class*="column"]:last-child { float: right; } */
 
 [class*="column"] + [class*="column"].end { float: left; }
 
