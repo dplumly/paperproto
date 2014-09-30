@@ -30,24 +30,10 @@
 	</head>
 	<body>
 
-		<!-- Facebook API -->
-		<div id="fb-root"></div>
-
-		<script>
-		  (function(d, s, id) {
-		  var js, fjs = d.getElementsByTagName(s)[0];
-		  if (d.getElementById(id)) return;
-		  js = d.createElement(s); js.id = id;
-		  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
-		  fjs.parentNode.insertBefore(js, fjs);
-		  }(document, 'script', 'facebook-jssdk'));
-		</script>
-		<!-- End Facebook API Pull -->
-
 		<div class="landing">
 
 			<section class="social">
-				<div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/"></div>
+
 				<a class="twitter-share-button"
 						  href="https://twitter.com/share"
 						  data-url="paperproto.com"
@@ -76,7 +62,7 @@
  						to quickly express your vision in a way that is in perspective to real use while promoting an agile workflow. Inspired by the Internet famous <a href="https://dribbble.com/shots/974256-ironPhone-custom-made-sketch-preview-tool" target="_blank">IronPhone</a> we thought there was surely a 3D printable model to use for paper prototyping, but there was none. <strong> So, we made it. </strong> The .ZIP file contains the .STL and .PDF so you can get started quickly mocking up awesome mobile experiences.</p>
             	</section>
 
-            	<section class="four columns centered buttons">
+            	<section class="five columns centered">
             		<a href="img/paperproto_v1.zip"><button>DOWNLOAD</button></a>
             		<a href="http://www.shapeways.com/" target="_blank"><button>BUY</button></a>
             	</section>
@@ -84,7 +70,6 @@
 			</div><!-- end landing -->
 
 			<a href="#about" class="arrow">
-				<!-- <p>WHY?</p> -->
 				<img src="img/arrow.png"></img>
 			</a>
 
@@ -96,25 +81,25 @@
 		   <div class="row">
 
 		   		<div class="four columns" style="margin-top: 58px;">  
-	           		<img class="aboutImage" src="img/perspective.png"></img>
-	           		<h4 class="aboutH" style="margin-top: 34px;"> PERSPECTIVE </h4>
-	           		<p class="aboutP"> 
+	           		<img src="img/perspective.png"></img>
+	           		<h4 style="margin-top: 34px;"> PERSPECTIVE </h4>
+	           		<p> 
            				Putting perspective and actually in mobile size constraintes is really important. It’s the first step in crafting a proper digital experience.  
            			</p>
            		</div>
 
-           		<div class="four columns aboutContent" style="margin-top: 58px;">  
-	           		<img class="aboutImage" src="img/interactive.png"></img>
-	           		<h4 class="aboutH"> INTERACTION DESIGN </h4>
-	           		<p class="aboutP"> 
+           		<div class="four columns" style="margin-top: 58px;">  
+	           		<img src="img/interactive.png"></img>
+	           		<h4> INTERACTION DESIGN </h4>
+	           		<p> 
            				The ability to quickly study navigation and animations by having slots in the top and bottom. The templates allows for quick  content management and design.
 					</p>
            		</div>
 
-           		<div class="four columns aboutContent" style="margin-bottom: 58px; margin-top: 58px;">  
-	           		<img class="aboutImage" src="img/agile.png"></img>
-	           		<h4 class="aboutH"> AGILE WORKFLOW </h4>
-	           		<p class="aboutP">
+           		<div class="four columns" style="margin-bottom: 58px; margin-top: 58px;">  
+	           		<img src="img/agile.png"></img>
+	           		<h4> AGILE WORKFLOW </h4>
+	           		<p>
            				Drawing has a different psychology than jumping right into digital work. It's easily disposable. Showing teammates paper prototypes allows for easy changes and input.
            			</p>
            		</div>
@@ -139,10 +124,10 @@
 		  <div class="row">
 			<div class="six columns">
 				<h3>ABOUT <span> US</span></h3>
-				<p id="footerAbout">
+				<p>
 					Drawing has a different psychology than jumping right into digital work. It's easily disposable. Showing teammates paper prototypes allows for easy changes and input.
 				</p>
-				<ul class="footerSocial" style="text-align: left;">
+				<ul>
 					<a href="donnieplumly.com" target="_blank"><li><span class="entypo-facebook-circled"></span><li></a>
 					<a href="donnieplumly.com" target="_blank"><li><span class="entypo-inbox"></span><li></a>
 					<a href="donnieplumly.com" target="_blank"><li><span class="entypo-linkedin-circled"></span><li></a>
@@ -150,16 +135,10 @@
 				</ul>
 			</div>
 			<div class="six columns">
-				<section class="buttons" style="margin-top: 65px;">
+				<section class="buttons">
             		<a href="img/paperproto_v1.zip"><button>DOWNLOAD</button></a>
             		<a href="http://www.shapeways.com/" target="_blank"><button>BUY</button></a>
             	</section>
-				<!-- <ul class="footerSocial">
-					<a href="iamtheream.io" target="_blank"><li><span class="entypo-facebook-circled"></span><li></a>
-					<a href="iamtheream.io" target="_blank"><li><span class="entypo-inbox"></span><li></a>
-					<a href="iamtheream.io" target="_blank"><li><span class="entypo-linkedin-circled"></span><li></a>
-					<a href="iamtheream.io" target="_blank"><li><span class="entypo-github-circled"></span><li></a>
-				</ul> -->
 			</div>
 		  </div>
 			<p class="copyright">
@@ -173,6 +152,7 @@
 
 		<!-- JavaScript -->
 
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script>
 			$(function() {
 			  $('a[href*=#]:not([href=#])').click(function() {
