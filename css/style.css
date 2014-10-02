@@ -134,7 +134,7 @@ p a:hover {
   display: block;
   position: relative;
   margin: auto;
-  top: 94%;
+  top: 54%;
 }
 
 .arrow p {
@@ -142,10 +142,9 @@ p a:hover {
 }
 
 #content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  margin: auto;
+  top: 20%;
 }
 
 .about {
@@ -321,6 +320,14 @@ footer div div ul li:hover{
       margin-right: 0;
     }
 
+    .arrow {
+      width: 2%;
+      display: block;
+      position: relative;
+      margin: auto;
+      top: 35%;
+    }
+
    .about div div {
      padding-top: 2em;
    }
@@ -375,7 +382,7 @@ footer div div ul li:hover{
   }
 
   #content {
-    top: 48%;
+    top: 20%;
   }
 
    h1 {
@@ -393,13 +400,13 @@ footer div div ul li:hover{
 
     #content section p {
       font-size: 14px;
-      margin-left: 0;
-      margin-right: 0;
+      margin-left: 2%;
+      margin-right: 2%;
   }
 
     .arrow {
       width: 6%;
-      top: 88%;
+      top: 24%;
     }
 
     .arrowBlack {
