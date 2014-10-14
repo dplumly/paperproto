@@ -35,13 +35,8 @@ li {
 
 a {
     text-decoration: none;
+    outline: none !important;
 }
-
-/*p {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-}*/
 
 h1, h2, h3, h4, h5, h6, p {
     font-family: 'Open Sans', sans-serif;
@@ -114,6 +109,7 @@ button {
     font-weight: 100;
     letter-spacing: 4px;
     margin: 0 auto;
+    outline: none !important;
     -webkit-transition:All .2s ease;
     -moz-transition:All .2s ease;
     -o-transition:All .2s ease;
@@ -157,9 +153,13 @@ p a:hover {
     margin-right: 15%;
 }
 
-#landingArrow {
-    position: relative;
-    bottom: -100px;
+.scrollArrow {
+    text-align: center;
+}
+
+#arrowDownLanding { 
+    bottom: 0;
+    position: absolute;
 }
 
 /* -------------------------------- 
@@ -177,10 +177,6 @@ about
     background-size: cover;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-}
-
-#aboutContent {
-    margin-top: 50%;
 }
 
 #about img {
@@ -208,9 +204,15 @@ about
     text-align: center;
 }
 
-#aboutArrow {
-    position: relative;
-    top: 300px;
+#aboutContent {
+    margin-top: 50%;
+}
+
+#arrowDownAbout { 
+    bottom: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
 }
 
 /* -------------------------------- 
@@ -277,13 +279,26 @@ Phone assets
     top: 240px;
     margin: 150px 0;
     background-color: #fff;
-    background-image: url('../img/backgrounds/bg.png');
+    background-image: url('../img/backgrounds/bg1.png');
 }
 
 #steps h3, #steps p {
     font-family: 'Waiting for the Sunrise', cursive;
     color: #333;
-    line-height: 1;
+    line-height: 1.4;
+}
+
+#steps p a{
+    color: #333;
+    border-bottom: 1px solid #333;
+    -webkit-transition:All .4s ease;
+    -moz-transition:All.4s ease;
+    -o-transition:All .4s ease;
+}
+
+#steps p a:hover{
+    color: #fff;
+    background-color: #333;
 }
 
 hr {
@@ -333,6 +348,7 @@ Nav
     position: relative;
     top: -575px;
     left: 250px;
+    outline: none !important;
 }
 
 /* -------------------------------- 
@@ -523,7 +539,7 @@ Tablet Portrait Media Query
     }
 
     #content {
-        margin: 165px auto;
+        margin: 225px auto;
     }
 
     #landingArrow {
@@ -535,7 +551,7 @@ Tablet Portrait Media Query
     }
 
      #aboutContent {
-        margin-top: 46%;
+        margin-top: 48%;
     }
 
    .about div div {
@@ -552,7 +568,7 @@ Tablet Portrait Media Query
    }
 
    #nav {
-        top: -375px;
+        top: -500px !important;
     }
 
 
@@ -582,6 +598,53 @@ Tablet Portrait Media Query
 
     .arrowBlack {
         display: none;
+    }
+}
+
+/* -------------------------------- 
+
+iPad Mini Media Query
+
+-------------------------------- */
+
+@media only screen and (max-width: 767px) {
+    
+    #landingContent section p {
+        font-size: 18px;
+    }
+
+    .arrow {
+        width: 2%;
+        display: block;
+        position: relative;
+        margin: auto;
+        top: 35%;
+    }
+
+    #content {
+        margin: 165px auto;
+    }
+
+    #about {
+        height: auto;
+    }
+
+    #aboutContent {
+        margin-top: 10%;
+        margin-bottom: 2%;
+    }
+
+   .about div div img {
+        width: 15%;
+    }
+
+   .about div div p {
+        padding-left: 8%;
+        padding-right: 8%;
+   }
+
+   #nav {
+        top: -400px !important;
     }
 }
 
@@ -619,6 +682,11 @@ Mobile Media Query
         top: 14%;
   }
 
+  #landingContent button {
+    width: 120px;
+    font-size: .4em;
+  }
+
    h1 {
         font-size: 2.5em;
   }
@@ -629,7 +697,7 @@ Mobile Media Query
 
   #aboutContent {
     margin-top: 20%;
-    margin-bottom: 20%;
+    margin-bottom: 12%;
   }
 
   .about div div {
@@ -647,9 +715,10 @@ Mobile Media Query
         margin-right: 2%;
   }
 
-    .arrow {
-        width: 6%;
-        top: 24%;
+    #landingArrow {
+        position: absolute;
+        left: 39%;
+        bottom: 20px;
     }
 
     .arrowBlack {
