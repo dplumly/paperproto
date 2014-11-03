@@ -1,5 +1,6 @@
-paperPrototype
+PAPERPROTO
 ==============
+paperproto.com
 
 Both Matt and I went undergrad and grad school together for Creative Technology. We both have a love for great tools with great design and have both used paper as a prototyping tool.
 Matt stumbled across a prototyping tool called the Ironphone. It was a great step in making paper prototyping more realistic for the user. The only problem was the people that made it didn't make it open source. With that in mind we decided to make our own and take it to the next level.
