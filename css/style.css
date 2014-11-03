@@ -343,7 +343,7 @@ section#section1, section#section2, section#section3, section#section4 {
 
 #nav {
     position: relative;
-    top: -575px;
+    top: -500px;
     left: 250px;
     outline: none !important;
 }
@@ -474,12 +474,22 @@ Laptop Media Query
         margin-top: 22%;
     }
 
-    #nav {
+    /*#nav {
         top: -375px !important;
-    }
+    }*/
 }
 
+/* -------------------------------- 
 
+Footer fix
+
+-------------------------------- */
+@media only screen and (max-width: 1200px) {
+
+    footer .six.columns {
+        left: 20px;
+    }
+}
 /* -------------------------------- 
 
 Tablet Landscape Media Query
@@ -510,9 +520,9 @@ Tablet Landscape Media Query
         margin-top: 22%;
     }
 
-    #nav {
+    /*#nav {
         top: -375px !important;
-    }
+    }*/
 }
 
 /* -------------------------------- 
