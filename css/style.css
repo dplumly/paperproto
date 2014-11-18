@@ -22,7 +22,6 @@ html, body {
     font-family: 'entypo', sans-serif;
 }
 
-
 *, *:after, *:before {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -481,17 +480,6 @@ Laptop Media Query
 
 /* -------------------------------- 
 
-Footer fix
-
--------------------------------- */
-@media only screen and (max-width: 1200px) {
-
-    footer .six.columns {
-        left: 20px;
-    }
-}
-/* -------------------------------- 
-
 Tablet Landscape Media Query
 
 -------------------------------- */
@@ -523,6 +511,18 @@ Tablet Landscape Media Query
     /*#nav {
         top: -375px !important;
     }*/
+}
+
+/* -------------------------------- 
+
+Footer fix
+
+-------------------------------- */
+@media only screen and (min-width: 769px) {
+
+    footer .six.columns {
+        left: 20px;
+    }
 }
 
 /* -------------------------------- 
