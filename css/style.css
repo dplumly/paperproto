@@ -11,6 +11,7 @@ html, body {
     font-weight: 400;
     font-size: 1em;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
 }
 
 ::-webkit-scrollbar { 
@@ -28,9 +29,7 @@ html, body {
     box-sizing: border-box;
 }
 
-li {
-    list-style: none;
-}
+li { list-style: none; }
 
 a {
     text-decoration: none;
@@ -45,6 +44,122 @@ h1, h2, h3, h4, h5, h6, p {
 *, *:after, *:before { border-box; box-sizing: border-box; }
 .clearfix:before, .clearfix:after { content: ''; display: table; }
 .clearfix:after { clear: both; }
+
+
+.wrapper-dropdown-2 {
+    /* Size and position */
+    position: relative; /* Enable absolute positionning for children and pseudo elements */
+
+    /* Styles */
+    cursor: pointer;
+    float: left;
+    width: 157px;
+    text-decoration: none;
+    border: 2px solid white;
+    padding: 14px;
+    background-color: transparent;
+    color: white;
+    font-weight: 100;
+    letter-spacing: 2px;
+    outline: none !important;
+    -webkit-transition:All .2s ease;
+    -moz-transition:All .2s ease;
+    -o-transition:All .2s ease;
+}
+
+.wrapper-dropdown-2:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.wrapper-dropdown-2:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 11px;
+    top: 50%;
+    margin-top: -3px;
+    border-width: 6px 6px 0 6px;
+    border-style: solid;
+    border-color: #fff transparent;
+}
+
+.wrapper-dropdown-2:hover:after{
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 11px;
+    top: 50%;
+    margin-top: -3px;
+    border-width: 6px 6px 0 6px;
+    border-style: solid;
+    border-color: #000 transparent;
+}
+
+.wrapper-dropdown-2 .dropdown {
+    position: absolute;
+    left: -2px;
+    right: 0;
+    background: white;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    list-style: none;
+    opacity: 0;
+    pointer-events: none;
+    width: 157px;
+}
+
+.wrapper-dropdown-2 .dropdown li a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    padding: 5px;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+ul.dropdown { padding: 0; }
+ul.dropdown li { width: 157px; }
+
+
+.wrapper-dropdown-2 .dropdown li i {
+    margin-right: 5px;
+    color: inherit;
+    vertical-align: middle;
+}
+
+/* Hover state */
+
+.wrapper-dropdown-2 .dropdown li:hover a { background-color: #AFAFAF; }
+
+/* Active state */
+
+.wrapper-dropdown-2.active:after { border-width: 0 6px 6px 6px; }
+
+.wrapper-dropdown-2.active .dropdown { opacity: 1; pointer-events: auto; }
+
+/* No CSS3 support */
+
+.no-opacity       .wrapper-dropdown-2 .dropdown,
+.no-pointerevents .wrapper-dropdown-2 .dropdown {
+    display: none;
+    opacity: 1; /* If opacity support but no pointer-events support */
+    pointer-events: auto; /* If pointer-events support but no pointer-events support */
+}
+
+.no-opacity       .wrapper-dropdown-2.active .dropdown,
+.no-pointerevents .wrapper-dropdown-2.active .dropdown {
+    display: block;
+}
+
 
 /* -------------------------------- 
 
@@ -159,6 +274,11 @@ p a:hover {
 #arrowDownLanding { 
     bottom: 20px;
     position: absolute;
+}
+
+.buttons {
+    margin: 20px auto;
+    display: table;
 }
 
 /* -------------------------------- 
@@ -359,7 +479,7 @@ footer {
     background: url("../img/footer.jpg") repeat center center;
     background-color: black;
     color: white;
-    text-align: center;
+    overflow-y: hidden;
 }
 
 footer p {
@@ -412,10 +532,7 @@ footer section {
 }
 
 footer ul {
-    margin: 0;
     padding: 0;
-    padding-top: 15px;
-    text-align: left;
 }
 
 footer ul a {
@@ -442,12 +559,22 @@ footer ul li:hover {
     margin-top: 50px;
     margin-bottom: 40px;
     text-align: center;
+    margin: 25px auto;
+    display: table;
+    padding-bottom: 20px;
 }
 
 .copyright a span {
     text-transform: uppercase;
     font-weight: 700;
 }
+
+#dd2.wrapper-dropdown-2 li {
+    font-size: 1em;
+}
+
+#dd2 ul li { display: inline-block; padding: 0; }
+#dd2 ul li:hover { opacity: 1; }
 
 /* -------------------------------- 
 
@@ -794,36 +921,32 @@ Mobile Media Query
     }
 
     #landingContent button {
-    width: 120px;
-    font-size: .4em;
-  }
+        width: 120px;
+        font-size: .4em;
+    }
 
-   h1 {
-        font-size: 2.5em;
-  }
+    #dd.wrapper-dropdown-2 { width: 120px; font-size: .4em; }
+    #dd2.wrapper-dropdown-2 { width: 120px; font-size: .4em; }
 
-  #about {
-    height: auto;
-  }
+    h1 { font-size: 2.5em; }
 
-  #aboutContent {
-    margin-top: 20%;
-    margin-bottom: 12%;
-  }
+    #about { height: auto; }
 
-  .about {
+    #aboutContent { margin-top: 20%; margin-bottom: 12%; }
+
+    .about {
         padding-top: 3em;
-   }
+    }
 
-   p {
+    p {
         font-size: 14px;
         margin: 0;
     }
 
     #landingContent section p {
-        font-size: 14px;
-        margin-left: 2%;
-        margin-right: 2%;
+        font-size: 16px;
+        margin-left: 7%;
+        margin-right: 7%;
     }
 
     #landingArrow {
@@ -859,7 +982,7 @@ Mobile Media Query
    }
 
    footer section a button {
-        font-size: 10px;
+        font-size: .4em;
         width: 120px;
    }
 }

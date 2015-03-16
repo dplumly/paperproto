@@ -31,7 +31,7 @@
 		<link rel="stylesheet" href="css/normalize.css" />
 		<link rel="stylesheet" href="css/foundation.css">
 		<link rel="stylesheet" href="css/style.css" />
-		<script src="js/modernizr.custom.js"></script>
+		<script src="js/modernizr.js"></script>
 		<!--[if IE]>
   		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
@@ -55,7 +55,7 @@
 				<video autoplay="on" loop="on" muted>
 				  	<source src="img/paperproto_v1.mp4" type="video/mp4">
 				  	<source src="img/paperproto_v1.webm" type="video/webm">
-				  	<img src="img/paperproto_4_web.jpg" title="Your browser does not support the <video> tag">
+				  	<img src="img/landing/paperproto_4_web.jpg" title="Your browser does not support the <video> tag">
 				</video>
 
 				<img class="mobileImage" src="img/landing/paperproto_4_web.jpg" title="Paperproto-mobile-img">
@@ -72,8 +72,18 @@
 	            		</section>
 	            	</div>
 
-	            	<section class="five columns centered" style="text-align: center;">
-	            		<a href="img/PAPERPROTO.zip"><button>DOWNLOAD</button></a>
+	            	<section class="buttons">
+	            		<!--<a href="img/PAPERPROTO.zip"><button>DOWNLOAD</button></a>-->
+
+	            		<div id="dd" class="wrapper-dropdown-2">DOWNLOAD
+							<ul class="dropdown">
+								<li><a href="img/downloads/PAPERPROTO-5.zip">iPhone 5</a></li>
+								<li><a href="img/downloads/PAPERPROTO-6.zip">iPhone 6</a></li>
+								<li><a href="img/downloads/PAPERPROTO-6-PLUS.zip">iPhone 6 PLUS</a></li>
+							</ul>
+						</div>
+
+
 	            		<a href="http://www.shapeways.com/shops/paperproto" target="_blank"><button>BUY</button></a>
 	            	</section>
 				</div><!-- end landingContent -->
@@ -240,7 +250,22 @@
 					</ul>
 				</div><!-- end six columns -->
 
-				<div class="six columns">
+				<section class="buttons">
+            		<!--<a href="img/PAPERPROTO.zip"><button>DOWNLOAD</button></a>-->
+
+            		<div id="dd2" class="wrapper-dropdown-2">DOWNLOAD
+						<ul class="dropdown">
+							<li><a href="img/downloads/PAPERPROTO-5.zip">iPhone 5</a></li>
+							<li><a href="img/downloads/PAPERPROTO-6.zip">iPhone 6</a></li>
+							<li><a href="img/downloads/PAPERPROTO-6-PLUS.zip">iPhone 6 PLUS</a></li>
+						</ul>
+					</div>
+
+
+            		<a href="http://www.shapeways.com/shops/paperproto" target="_blank"><button>BUY</button></a>
+            	</section>
+
+				<!--<div class="six columns">
 					<section class="buttons">
             			<a href="img/PAPERPROTO.zip"><button>DOWNLOAD</button></a>
             			<a href="http://www.shapeways.com/shops/paperproto" target="_blank"><button>BUY</button></a>
@@ -260,6 +285,50 @@
 	<!-- JavaScript -->
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script src="js/instructions.js"></script>
+
+	<!-- Drop down for download -->
+	<script type="text/javascript">
+
+			function DropDown(el) {
+				this.dd = el;
+				this.initEvents();
+			}
+			DropDown.prototype = {
+				initEvents : function() {
+					var obj = this;
+
+					obj.dd.on('click', function(event){
+						$(this).toggleClass('active');
+						event.stopPropagation();
+					});	
+				}
+			}
+
+			$(function() {
+
+				var dd = new DropDown( $('#dd') );
+
+				$(document).click(function() {
+					// all dropdowns
+					$('.wrapper-dropdown-2').removeClass('active');
+				});
+
+			});
+
+			$(function() {
+
+				var dd = new DropDown( $('#dd2') );
+
+				$(document).click(function() {
+					// all dropdowns
+					$('.wrapper-dropdown-2').removeClass('active');
+				});
+
+			});
+
+		</script>
+
+
 
     <!-- Instructions Script -->
     <script>
