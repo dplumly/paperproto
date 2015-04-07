@@ -921,8 +921,8 @@ Mobile Media Query
     }
 
     #landingContent button {
-        width: 120px;
-        font-size: .4em;
+        /*width: 120px;
+        font-size: .4em;*/
     }
 
     #dd.wrapper-dropdown-2, #dd2.wrapper-dropdown-2 { display: none; }
@@ -975,7 +975,8 @@ Mobile Media Query
 
     footer p {
         text-align: center;
-        width: 90%;
+        width: 100%;
+        padding: 0 7%;
    }
 
    footer ul li {
@@ -983,7 +984,7 @@ Mobile Media Query
    }
 
    footer section a button {
-        font-size: .4em;
-        width: 120px;
+        /*font-size: .4em;
+        width: 120px;*/
    }
 }
