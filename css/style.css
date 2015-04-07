@@ -917,7 +917,8 @@ Mobile Media Query
     }
 
     #landingContent {
-        top: 14%;
+        /*top: 14%;*/
+        margin: 60px 0 0 0;
     }
 
     #landingContent button {
