@@ -123,7 +123,6 @@ img { -ms-interpolation-mode: bicubic; }
 for repeating blocks of content. Add 'mobile' to
 them to switch them just like the layout grid
 (one item per line) on phones
-
 For IE7/8 compatibility block-grid items need to be
 the same height. You can optionally uncomment the
 lines below to support arbitrary height, but know
@@ -345,7 +344,6 @@ table.show-for-xlarge, table.show-for-large, table.hide-for-small, table.hide-fo
   .block-grid.mobile-eleven-up > li:nth-child(11n+1) { clear: both; }
   .block-grid.mobile-twelve-up > li { width: 8.33333%; }
   .block-grid.mobile-twelve-up > li:nth-child(12n+1) { clear: both; }
-
 
 
 
