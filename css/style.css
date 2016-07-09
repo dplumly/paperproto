@@ -314,7 +314,7 @@ p a:hover {
     position: relative;
     height: auto;
     min-height: 525px;
-    background: url(../img/about_section_bg.jpg) no-repeat center;
+    background: url(../img/about/about_section_bg.jpg) no-repeat center;
     background-color: #EAEAEA;
     background-size: cover;
     -webkit-font-smoothing: antialiased;
@@ -494,7 +494,7 @@ section#section4 {
 footer {
     width: 100%;
     height: auto;
-    background: url(../img/footer.jpg) repeat center center;
+    background: url(../img/backgrounds/footer.jpg) repeat center center;
     background-color: #000;
     color: #fff;
     overflow-y: hidden
