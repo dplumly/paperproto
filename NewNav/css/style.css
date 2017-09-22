@@ -1,0 +1,786 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise|Open+Sans:400,300,800,700);
+
+/*  SOURCE ICON FONT = @import url(http://weloveiconfonts.com/api/?family=entypo); */
+@charset "UTF-8";
+@font-face {
+  font-family: 'entypo';
+  font-style: normal;
+  font-weight: normal;
+  src: url(../fonts/entypo.eot);
+  src: url(../fonts/entypo/entypo.eot#iefix) format('embedded-opentype'), 
+  url(../fonts/entypo/entypo.woff) format('woff'), 
+  url(../fonts/entypo/entypo.ttf) format('truetype'),
+  url(../fonts/entypo/entypo.svg) format('svg'); 
+}
+
+/* entypo */
+[class*="entypo-"]:before {
+    font-family: 'entypo', sans-serif;
+}
+
+.entypo-facebook-circled:before{content:"\f30d"}
+.entypo-inbox:before{content:"\e777"}
+.entypo-linkedin-circled:before{content:"\f319"}
+.entypo-github-circled:before{content:"\f301"}
+
+html,
+body {
+    height: 100%;
+    background: #f6f9fa;
+    font-weight: 400;
+    font-size: 1em;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden
+}
+
+::-webkit-scrollbar { display: none }
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+li { list-style: none }
+
+a { text-decoration: none; outline: none!important }
+
+h1, h2, h3, h4, h5, h6, p { font-family: 'Open Sans', sans-serif; color: #fff }
+
+.clearfix:before, .clearfix:after { content: ''; display: table }
+
+.clearfix:after { clear: both }
+
+
+/*===========================
+
+DOWNLOAD NAV
+
+===========================*/
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed; 
+    z-index: 2; 
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0, 0.9); 
+    overflow-x: hidden; 
+    transition: 0.5s; 
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%; 
+    width: 100%; 
+    text-align: center; 
+    margin-top: 30px; 
+}
+
+#menuContent { width: 540px; margin: 80px auto 0 auto; }
+#menuContent li { margin: 20px 0; }
+
+ul#android { float: right; padding-right: 50px; }
+ul#android h2 { 
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    letter-spacing: 4px;
+    line-height: 22px;
+    text-align: center; 
+}
+
+ul#iPhone { float: left; padding-left: 50px; }
+ul#iPhone h2 { 
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    letter-spacing: 4px;
+    line-height: 22px;
+    text-align: center; }
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    color: #818181;
+    display: block; 
+    transition: 0.3s; 
+}
+
+a.model {
+    width: 192px;
+    text-decoration: none;
+    border: 2px solid #fff;
+    background-color: rgba(255, 255, 255, 0.18);
+    border-radius: 2px;
+    padding: 14px;
+    background-color: transparent;
+    color: #fff;
+    font-weight: 100;
+    letter-spacing: 4px;
+    margin: 0 auto;
+    outline: none!important;
+    cursor: pointer;
+    -webkit-transition: All .2s ease;
+    -moz-transition: All .2s ease;
+    -o-transition: All .2s ease;
+    text-align: center;
+}
+
+a.model:hover {
+    border: 2px solid #fff;
+    padding: 14px;
+    background-color: #fff;
+    color: #000!important;
+    font-weight: 100;
+    letter-spacing: 4px;
+    margin: 0 auto;
+}
+
+
+.overlay a:hover, .overlay a:focus { color: #f1f1f1; }
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+/*
+.closebtn {
+    opacity: 1;
+    transition: opacity 0.3s;
+    -webkit-transition: opacity 0.3s;
+    -moz-transition: opacity 0.3s;
+}
+
+.closebtn {
+    opacity: .2;
+}
+*/
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+/*===========================
+
+LANDING
+
+===========================*/
+
+#landing {
+    position: relative;
+    height: 86%;
+    background-size: cover;
+    z-index: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.social {
+    float: right;
+    margin-top: 20px;
+    margin-right: 20px
+}
+
+video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    background-size: cover
+}
+
+.mobileImage { display: none }
+
+h1 {
+    margin: 0 auto;
+    line-height: 1;
+    text-align: center;
+    font-size: 5em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    letter-spacing: 2px
+}
+
+h1 span {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px
+}
+
+.buttonDefinitions {
+    width: 157px;
+    text-decoration: none;
+    border: 2px solid #fff;
+    background-color: rgba(255, 255, 255, 0.18);
+    border-radius: 2px;
+    padding: 14px;
+    background-color: transparent;
+    color: #fff;
+    font-weight: 100;
+    letter-spacing: 4px;
+    margin: 0 auto;
+    outline: none!important;
+    display: table-cell;
+    cursor: pointer;
+    -webkit-transition: All .2s ease;
+    -moz-transition: All .2s ease;
+    -o-transition: All .2s ease
+}
+
+.buttonDefinitions:hover {
+    border: 2px solid #fff;
+    padding: 14px;
+    background-color: #fff;
+    color: #000;
+    font-weight: 100;
+    letter-spacing: 4px;
+    margin: 0 auto
+}
+
+a#buyButton { margin-left: 20px; }
+
+
+
+button {
+    width: 157px;
+    text-decoration: none;
+    border: 2px solid #fff;
+    background-color: rgba(255, 255, 255, 0.18);
+    border-radius: 2px;
+    padding: 14px;
+    background-color: transparent;
+    color: #fff;
+    font-weight: 100;
+    letter-spacing: 4px;
+    margin: 0 auto;
+    outline: none!important;
+    -webkit-transition: All .2s ease;
+    -moz-transition: All .2s ease;
+    -o-transition: All .2s ease
+}
+
+button:hover {
+    border: 2px solid #fff;
+    padding: 14px;
+    background-color: #fff;
+    color: #000;
+    font-weight: 100;
+    letter-spacing: 4px;
+    margin: 0 auto
+}
+
+p a {
+    text-decoration: none;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transition: All .4s ease;
+    -moz-transition: All.4s ease;
+    -o-transition: All .4s ease
+}
+
+p a:hover {
+    text-decoration: none;
+    padding: 4px;
+    color: #000;
+    background-color: #fff;
+    border-bottom: 1px solid #fff
+}
+
+#landingContent { margin: 160px auto; clear: both }
+
+#landingContent p {
+    font-weight: 400;
+    font-size: 22px;
+    margin-left: 15%;
+    margin-right: 15%
+}
+
+.buttons { margin: 0px auto; display: table }
+
+
+/*===========================
+
+ABOUT
+
+===========================*/
+#about {
+    position: relative;
+    height: auto;
+    min-height: 525px;
+    background: url(../img/about/about_section_bg.jpg) no-repeat center;
+    background-color: #EAEAEA;
+    background-size: cover;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+#about img { display: block; margin: auto }
+
+#about h4 {
+    color: #000;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 4px;
+    line-height: 22px
+}
+
+#about p {
+    color: #000;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 2px;
+    line-height: 22px;
+    text-align: center;
+    padding: 0 40px
+}
+
+#aboutContent { padding-top: 122px }
+
+#arrowDownAbout {
+    bottom: 20px;
+    position: absolute;
+    left: 0;
+    right: 0
+}
+
+/*===========================
+
+INSTRUCTIONS
+
+===========================*/
+
+#instructionsContainer {
+    background: url(../img/instructions/instructionsBG7.jpg) no-repeat center;
+    height: 70%;
+    width: 100%
+}
+
+#instructions {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    width: 500px;
+    left: 20%
+}
+
+#phone {
+    position: relative;
+    z-index: 1;
+    top: 100px
+}
+
+#top { position: absolute; top: 10px }
+
+#left { position: absolute; top: 71px }
+
+#right {
+    position: absolute;
+    top: 71px;
+    left: 225px
+}
+
+#bottom { position: absolute; top: 430px }
+
+#paper {
+    position: relative;
+    width: 220px;
+    left: 10px;
+    height: 100%
+}
+
+#steps {
+    padding: 0 40px;
+    top: 240px;
+    margin: 150px 0;
+    background-color: #fff;
+    background-image: url(../img/backgrounds/bg1.png)
+}
+
+#steps h2, #steps p {
+    font-family: 'Waiting for the Sunrise', cursive;
+    color: #333;
+    line-height: 1.4
+}
+
+#steps p a {
+    color: #333;
+    border-bottom: 1px solid #333;
+    -webkit-transition: All .4s ease;
+    -moz-transition: All.4s ease;
+    -o-transition: All .4s ease
+}
+
+#steps p a:hover { color: #fff; background-color: #333 }
+
+hr {
+    position: relative;
+    right: 40px;
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #11b0c2;
+    margin: 1em 0;
+    opacity: .3;
+    padding: 0
+}
+
+#section1, #section2, #section3, #section4 { margin: 60px 0 }
+
+#section5 h3, #section5 p { visibility: hidden }
+
+section#section1, section#section2, section#section3, section#section4 { height: 700px }
+
+#tab {
+    height: 100px;
+    width: 100px;
+    background-color: #3e4b75;
+    position: absolute;
+    right: 60px;
+    top: -100px
+}
+
+#tab img {
+    position: relative;
+    left: 30px;
+    top: 10px
+}
+
+#nav {
+    position: relative;
+    top: -500px;
+    left: 250px;
+    outline: none!important
+}
+
+#nav li { margin-bottom: 10px }
+
+
+/*===========================
+
+FOOTER
+
+===========================*/
+
+footer {
+    width: 100%;
+    height: auto;
+    background: url(../img/backgrounds/footer.jpg) repeat center center;
+    background-color: #000;
+    color: #fff;
+    overflow-y: hidden
+}
+
+footer p {
+    max-width: 520px;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    color: #AFAFAF;
+    font-weight: 300;
+    font-size: 14px;
+    text-align: left;
+    margin-top: 0;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transition: All .4s ease;
+    -moz-transition: All.4s ease;
+    -o-transition: All .4s ease
+}
+
+footer p a { border: none }
+
+footer p a:hover {
+    text-decoration: none;
+    color: #000;
+    background-color: #fff;
+    border-bottom: 1px solid #fff
+}
+
+footer h3 {
+    letter-spacing: 4px;
+    margin-top: 65px;
+    text-align: left
+}
+
+footer h3 span:hover {
+    -webkit-transition: All .4s ease;
+    -moz-transition: All.4s ease;
+    -o-transition: All .4s ease;
+    text-decoration: none;
+    color: #000;
+    background-color: #fff;
+    border-bottom: 1px solid #fff
+}
+
+footer section { margin-top: 100px }
+
+footer ul { padding: 0 }
+
+footer ul a { color: #fff }
+
+footer ul li {
+    color: #fff;
+    display: inline;
+    text-decoration: none;
+    padding-right: 6px;
+    margin: 0;
+    font-size: 35px;
+    -webkit-transition: All .2s ease;
+    -moz-transition: All.2s ease;
+    -o-transition: All .2s ease
+}
+
+footer ul li:hover { opacity: .4 }
+
+footer .buttons { margin-top: 122px }
+
+.copyright {
+    text-align: center;
+    margin: 25px auto;
+    display: table;
+    padding-bottom: 20px
+}
+
+.copyright a span { text-transform: uppercase; font-weight: 700 }
+
+#dd2.wrapper-dropdown-2 li { font-size: 1em }
+
+#dd2 ul li { display: inline-block; padding: 0 }
+
+#dd2 ul li:hover { opacity: 1 }
+
+@media only screen and (max-width: 1444px) {
+    #landingContent { margin: 115px auto }
+    #landingArrow { bottom: 0 }
+}
+
+@media only screen and (min-height: 1024px) {
+    #landingContent { margin: 300px auto }
+}
+
+@media only screen and (max-width: 1024px) {
+    #landingContent { margin: 115px auto }
+    #landingArrow { bottom: 0 }
+    #aboutContent { padding-top: 110px }
+}
+
+@media only screen and (min-width: 769px) {
+    footer .six.columns { left: 20px }
+}
+
+@media only screen and (max-width: 850px) {
+    #aboutContent { padding-top: 60px }
+    #landingContent section p {
+        font-size: 20px;
+        text-align: center;
+        margin-left: 35px;
+        margin-right: 35px
+    }
+}
+
+@media only screen and (max-width: 769px) {
+    h1 { font-size: 4em }
+    .arrow {
+        width: 2%;
+        display: block;
+        position: relative;
+        margin: auto;
+        top: 35%
+    }
+    #content { margin: 225px auto }
+    #landingArrow { bottom: 0 }
+    .about { padding-top: 2em }
+    .about img { width: 15% }
+    .about p { padding-left: 8%; padding-right: 8% }
+    #nav { top: -500px!important }
+    footer h3 { text-align: center; margin-top: 30px }
+    footer p {
+        text-align: center;
+        width: 80%;
+        display: inherit;
+        margin: 0 auto
+    }
+    footer ul { text-align: center padding-top: 0 }
+    .footer p { margin-left: 8%; margin-right: 8% }
+    footer section { margin-top: 50px }
+    .arrowBlack { display: none }
+}
+
+@media only screen and (max-height: 850px) {
+    #phone {
+        position: relative;
+        z-index: 1;
+        top: 30px
+    }
+    #top {
+        position: absolute;
+        top: 24px;
+        width: 177.75px
+    }
+    #left {
+        position: absolute;
+        top: 71px;
+        width: 8.25px
+    }
+    #right {
+        position: absolute;
+        top: 71px;
+        left: 169px;
+        width: 9px
+    }
+    #bottom {
+        position: absolute;
+        top: 352px;
+        width: 177.75px
+    }
+    #paper {
+        position: relative;
+        width: 220px;
+        left: 2px;
+        height: 100%
+    }
+    #steps {
+        padding: 0 15px;
+        top: 240px;
+        margin: 80px 0;
+        background-color: #fff;
+        background-image: url(../img/backgrounds/bg1.png);
+        width: 170px
+    }
+    #steps h2, #steps p {
+        font-family: 'Waiting for the Sunrise', cursive;
+        color: #333;
+        line-height: 1.1
+    }
+    #steps p a {
+        color: #333;
+        border-bottom: 1px solid #333;
+        -webkit-transition: All .4s ease;
+        -moz-transition: All.4s ease;
+        -o-transition: All .4s ease
+    }
+    #steps p a:hover {
+        color: #fff;
+        background-color: #333
+    }
+    #section1, #section2, #section3, #section4 { margin: 40px 0 }
+    #tab {
+        height: 75px;
+        width: 75px;
+        background-color: #3e4b75;
+        position: absolute;
+        right: 50px;
+        top: -75px
+    }
+    #tab img {
+        position: relative;
+        left: 20px;
+        top: 15px
+    }
+    #nav {
+        top: -390px!important;
+        left: 170px
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    #landingContent section p {
+        font-size: 18px
+    }
+    .arrow {
+        width: 2%;
+        display: block;
+        position: relative;
+        margin: auto;
+        top: 35%
+    }
+    #content { margin: 165px auto }
+    #about { height: auto }
+    .about img { width: 15% }
+    .about p { padding-left: 8%; padding-right: 8% }
+    #aboutContent { padding-top: 60px; padding-bottom: 50px }
+    #aboutContent div { padding-bottom: 40px }
+    footer .buttons { margin-top: 20px }
+}
+
+@media only screen and (max-height: 750px) {
+    #landingContent { margin: 50px auto }
+}
+
+@media only screen and (max-width: 640px) {
+    #instructionsContainer, .buttons { display: none }
+}
+
+@media only screen and (max-width: 460px) {
+    #landing { height: auto; min-height: 490px }
+    video {
+        display: none;
+        min-width: 100%;
+        height: 100%
+    }
+    .mobileImage {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 490px;
+        height: auto;
+        width: auto;
+        height: auto;
+        z-index: -100;
+        background-size: cover;
+        display: inline
+    }
+    .social { margin-top: 15px }
+    #landingContent { margin: 70px 0 0 }
+    #dd.wrapper-dropdown-2, #dd2.wrapper-dropdown-2 { display: none;  }
+
+    h1 { font-size: 2.5em }
+    #about { height: auto }
+    .about { padding-top: 3em }
+    p { font-size: 14px; margin: 0 }
+    #landingContent section p {
+        font-size: 16px;
+        margin-left: 7%;
+        margin-right: 7%
+    }
+    #landingArrow {
+        position: absolute;
+        left: 39%;
+        bottom: 20px
+    }
+    .arrowBlack {
+        width: 10%;
+        left: 46%;
+        bottom: -203%
+    }
+    .footer p { text-align: left }
+    #content section a button {
+        margin-bottom: 12px;
+        text-align: center;
+        font-size: 10px;
+        width: 120px
+    }
+    footer p {
+        text-align: center;
+        width: 100%;
+        padding: 0 7%
+    }
+    footer ul li { font-size: 28px }
+}
