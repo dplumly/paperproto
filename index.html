@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
+
+
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1"> 
-		<title>Paperproto</title>
+		<title>PAPERPROTO</title>
 		<meta name="description" content="The ultimate paper prototyping tool for UX designers to agilely design for mobile products. A 3D printed tool and paper template designed for speeding up workflow." />
 		<meta name="keywords" content="UX, Experience Design, Tool, Prototyping, 3D Printing, Template, Rapid Prototyping, Agile Design, Interaction Design, Product Design, App Development" />
 		<meta property=”og:title” content=”Paperproto Is A Rapid Mobile Prototyping Tool For UX Designers”/>
@@ -24,9 +26,8 @@
 		<meta name="twitter:description" content="Paperproto Tools" />
 		<meta name="twitter:image" content="https://www.flickr.com/photos/91109860@N02/15821477545/" />
 		<meta name="twitter:url" content="https://www.flickr.com/photos/91109860@N02/15821477545/" />
-
 		<meta name="author" content="Donnie Plumly / Matt Reamer" />
-		<!--<link rel=”author” href=”https://plus.google.com/u/0/111945287712150510058/posts]“/>-->
+
 		<link rel="shortcut icon" href="img/favicon/favicon.ico">
 		<link rel="stylesheet" href="css/normalize.css" />
 		<link rel="stylesheet" href="css/foundation.css">
@@ -35,88 +36,104 @@
 		<!--[if IE]>
   		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-	</head>
+	</head> 
 	<body>
-		<!-- landing section -->
+	<!-- The overlay -->
+	<div id="paperprotoChoice" class="overlay">
+		<div id="menuContent">
+			<!-- Button to close the overlay navigation -->
+		  	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
-		<div id="landing">
-			<section class="social">
-				<a class="twitter-share-button"
-					href="https://twitter.com/share"
-					data-url="paperproto.com"
-	  				data-via="THEPAPERPROTO"
-	 				data-text="The ultimate paper prototyping tool for UX designers to agilily design for mobile products. http://www.paperproto.com">
-					Tweet
-				</a>
+		  	<!-- Overlay content -->
+		  	<ul id="iPhone">
+		  		<h2>iPhone</h2>
+			    <li><a class="model" href="img/downloads/PAPERPROTO-5.zip">iPhone 5</a></li>
+			    <li><a class="model" href="img/downloads/PAPERPROTO-6.zip">iPhone 6s</a></li>
+			    <li><a class="model" href="img/downloads/PAPERPROTO-6-PLUS.zip">iPhone 6 Plus</a></li>
+			    <li><a class="model" href="img/downloads/PAPERPROTO-8.zip">iPhone 8</a></li>
+		    </ul>
+
+		    <ul id="android">
+		    	<h2>Android</h2>
+			    <li><a class="model" href="img/downloads/PAPERPROTO-Galaxy-S6.zip">Galaxy S6</a></li>
+			    <li><a class="model" href="img/downloads/PAPERPROTO-Galaxy-S8.zip">Galaxy S8</a></li>
+			    <li><a class="model" href="img/downloads/PAPERPROTO-Galaxy-Note8.zip">Galaxy Note8</a></li>
+		    </ul>
+		</div>
+	</div>
+
+
+	<div id="landing">
+		<section class="social">
+			<a class="twitter-share-button"
+				href="https://twitter.com/share"
+				data-url="paperproto.com"
+  				data-via="THEPAPERPROTO"
+ 				data-text="The ultimate paper prototyping tool for UX designers to agilily design for mobile products. http://www.paperproto.com">
+				Tweet
+			</a>
+		</section><!-- end social section -->
+
+
+		<div class="row">
+			<!-- Background Video -->
+			<video autoplay="on" loop="on" muted>
+			  	<source src="img/landing/paperproto_v1.mp4" type="video/mp4">
+			  	<source src="img/landing/paperproto_v1.webm" type="video/webm">
+			  	<img src="img/landing/paperproto_4_web.jpg" title="Your browser does not support the <video> tag">
+			</video>
+
+			<img class="mobileImage" src="img/landing/paperproto_4_web.jpg" title="Paperproto-mobile-img">
+		</div><!-- end row -->
+
+
+		<div id="landingContent">
+	  		<h1>PAPER<span>PROTO</span></h1>
+
+    		<section class="twelve columns">
+        		<p>
+        			Paper prototyping is a efficient way to quickly express your vision in a way that is in perspective to real use while. Inspired by the <a href="https://dribbble.com/shots/974256-ironPhone-custom-made-sketch-preview-tool" target="_blank">IronPhone</a> we thought there was surely a 3D printable model to use for paper prototyping, but there was none. <strong> So, we made it. </strong> The .ZIP file contains the .STL and .PDF so you can get started mocking up awesome mobile experiences.
+        		</p>
+    		</section>
+
+    		<section class="buttons">
+    			<span class="buttonDefinitions" onclick="openNav()">DOWNLOAD</span>
+    			<div></div>
+				<div></div>
+				<div></div>
+
+				<a id="buyButton" href="http://www.shapeways.com/shops/paperproto" target="_blank"><button>BUY</button></a>
 			</section>
-			<div class="row">
+        </div><!-- end landingContent -->	
+	</div><!-- end landing -->
 
-				<!-- Background Video -->
-				<video autoplay="on" loop="on" muted>
-				  	<source src="img/landing/paperproto_v1.mp4" type="video/mp4">
-				  	<source src="img/landing/paperproto_v1.webm" type="video/webm">
-				  	<img src="img/landing/paperproto_4_web.jpg" title="Your browser does not support the <video> tag">
-				</video>
-
-				<img class="mobileImage" src="img/landing/paperproto_4_web.jpg" title="Paperproto-mobile-img">
-
-				<div id="landingContent">
-				  	<section>
-				  		<h1>PAPER<span>PROTO</span></h1>
-		            </section>
-
-	            	<div class="row">
-	            		<section class="twelve columns">
-		            		<p>
-		            			Paper prototyping is a efficient way to quickly express your vision in a way that is in perspective to real use while. Inspired by the <a href="https://dribbble.com/shots/974256-ironPhone-custom-made-sketch-preview-tool" target="_blank">IronPhone</a> we thought there was surely a 3D printable model to use for paper prototyping, but there was none. <strong> So, we made it. </strong> The .ZIP file contains the .STL and .PDF so you can get started mocking up awesome mobile experiences.</p>
-	            		</section>
-	            	</div>
-
-	            	<section class="buttons">
-	            		<!--<a href="img/PAPERPROTO.zip"><button>DOWNLOAD</button></a>-->
-
-	            		<div id="dd" class="wrapper-dropdown-2">DOWNLOAD
-							<ul class="dropdown">
-								<li><a href="img/downloads/PAPERPROTO-5.zip">iPhone 5</a></li>
-								<li><a href="img/downloads/PAPERPROTO-6.zip">iPhone 6</a></li>
-								<li><a href="img/downloads/PAPERPROTO-6-PLUS.zip">iPhone 6 PLUS</a></li>
-							</ul>
-						</div>
-
-
-	            		<a href="http://www.shapeways.com/shops/paperproto" target="_blank"><button>BUY</button></a>
-	            	</section>
-				</div><!-- end landingContent -->
-
-			</div><!-- end row -->
-		</div><!-- end landing -->
 
 		<!-- about section -->
 		<div id="about">
 		    <div class="row" id="aboutContent">
-			     	<div class="four columns">  
-		           		<img src="img/about/phone.png">
-		           		<h4>PERSPECTIVE</h4>
-		           		<p> 
-	           				Putting perspective and actually in mobile size constraints is really important. It’s the first step in crafting a proper digital experience.  
-	           			</p>
-	           		</div>
+		     	<div class="four columns">  
+	           		<img src="img/about/phone.png">
+	           		<h4>PERSPECTIVE</h4>
+	           		<p> 
+           				Putting perspective and actually in mobile size constraints is really important. It’s the first step in crafting a proper digital experience.  
+           			</p>
+           		</div>
 
-	           		<div class="four columns">  
-		           		<img src="img/about/interactive.png">
-		           		<h4>INTERACTION DESIGN</h4>
-		           		<p> 
-	           				The ability to quickly study navigation and animations by having slots in the top and bottom. The templates allows for quick  content management and design.
-						</p>
-	           		</div>
+           		<div class="four columns">  
+	           		<img src="img/about/interactive.png">
+	           		<h4>INTERACTION DESIGN</h4>
+	           		<p> 
+           				The ability to quickly study navigation and animations by having slots in the top and bottom. The templates allows for quick  content management and design.
+					</p>
+           		</div>
 
-	           		<div class="four columns">  
-		           		<img src="img/about/agile.png"></img>
-		           		<h4> AGILE WORKFLOW </h4>
-		           		<p>
-	           				Drawing has a different psychology than jumping right into digital work. It's easily disposable. Showing teammates paper prototypes allows for easy changes and input.
-	           			</p>
-	           	    </div>
+           		<div class="four columns">  
+	           		<img src="img/about/agile.png"></img>
+	           		<h4> AGILE WORKFLOW </h4>
+	           		<p>
+           				Drawing has a different psychology than jumping right into digital work. It's easily disposable. Showing teammates paper prototypes allows for easy changes and input.
+           			</p>
+           	    </div>
             </div><!-- end row -->
 		</div><!-- end about -->
 
@@ -225,7 +242,7 @@
 				<div class="six columns">
 					<h3>ABOUT <span> US</span></h3>
 					<p>
-						Donnie is a Creative Technologist at Team One and Matt is an Sr. Experience Designer at Dollar Shave Club. Any feedback on this tool would help amazingly in the evolution of PAPERPROTO. Feel free to email us at <a href="mailto:paperproto@gmail.com">paperproto@gmail.com</a> with any questions or use cases.
+						Donnie is a Creative Technologist at Team One and Matt is an Sr. Experience Designer at CarMax. Any feedback on this tool would help amazingly in the evolution of PAPERPROTO. Feel free to email us at <a href="mailto:paperproto@gmail.com">paperproto@gmail.com</a> with any questions or use cases.
 					</p>
 					<ul>
 						<a href="https://www.facebook.com/THEream?fref=ts" target="_blank"><li><span class="entypo-facebook-circled"></span><li></a>
@@ -236,20 +253,13 @@
 				</div><!-- end six columns -->
 
 				<section class="buttons">
-            		
+		    		<span class="buttonDefinitions" onclick="openNav()">DOWNLOAD</span>
+		    			<div></div>
+						<div></div>
+						<div></div>
 
-            		<div id="dd2" class="wrapper-dropdown-2">DOWNLOAD
-						<ul class="dropdown">
-							<li><a href="img/downloads/PAPERPROTO-5.zip">iPhone 5</a></li>
-							<li><a href="img/downloads/PAPERPROTO-6.zip">iPhone 6</a></li>
-							<li><a href="img/downloads/PAPERPROTO-6-PLUS.zip">iPhone 6 PLUS</a></li>
-						</ul>
-					</div>
-
-
-            		<a href="http://www.shapeways.com/shops/paperproto" target="_blank"><button>BUY</button></a>
-            	</section>
-
+					<a id="buyButton" href="http://www.shapeways.com/shops/paperproto" target="_blank"><button>BUY</button></a>
+				</section>
 		  	</div><!-- end row -->
 
 			<p class="copyright">
@@ -261,107 +271,61 @@
 			</p>
 		</footer>
 
-	<!-- JavaScript -->
-	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script src="js/instructions.js"></script>
+		<!-- JavaScript -->
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script src="js/instructions.js"></script>
 
-	<!-- Drop down for download -->
-	<script type="text/javascript">
 
-			function DropDown(el) {
-				this.dd = el;
-				this.initEvents();
+		<!-- Instructions Script -->
+	    <script>
+	        function init_dw_Scroll() {
+	            var wndo = new dw_scrollObj('paper', 'steps');
+	            wndo.buildScrollControls('scrollLinks', 'v');
+	        }
+	        if ( dw_scrollObj.isSupported() ) {
+	            //dw_Util.writeStyleSheet('css/instructions.css');
+	            dw_Event.add( window, 'load', init_dw_Scroll);
+	        }
+	    </script>
+
+
+		<!-- Open Nav Script -->
+		<script type="text/javascript">
+			function openNav() {
+    			document.getElementById("paperprotoChoice").style.width = "100%";
+    			document.getElementById("paperprotoChoice").style.opacity = "1";
+			}	
+			function closeNav() {
+			  	document.getElementById("paperprotoChoice").style.width = "0%";
+
+			  	document.getElementById("paperprotoChoice").style.opacity = ".1";
 			}
-			DropDown.prototype = {
-				initEvents : function() {
-					var obj = this;
-
-					obj.dd.on('click', function(event){
-						$(this).toggleClass('active');
-						event.stopPropagation();
-					});	
-				}
-			}
-
-			$(function() {
-
-				var dd = new DropDown( $('#dd') );
-
-				$(document).click(function() {
-					// all dropdowns
-					$('.wrapper-dropdown-2').removeClass('active');
-				});
-
-			});
-
-			$(function() {
-
-				var dd = new DropDown( $('#dd2') );
-
-				$(document).click(function() {
-					// all dropdowns
-					$('.wrapper-dropdown-2').removeClass('active');
-				});
-
-			});
-
 		</script>
 
 
+		<!-- video -->
+	    <script>
+	    	if(site.isMobile()){
+				$('video *').hide();
+				$('video img').show();
+			}
+		</script>
+		
+		<!-- twitter -->
+		<script type="text/javascript">
+			window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
+		</script>
 
-    <!-- Instructions Script -->
-    <script>
-        function init_dw_Scroll() {
-            var wndo = new dw_scrollObj('paper', 'steps');
-            wndo.buildScrollControls('scrollLinks', 'v');
-        }
-        if ( dw_scrollObj.isSupported() ) {
-            dw_Util.writeStyleSheet('css/instructions.css');
-            dw_Event.add( window, 'load', init_dw_Scroll);
-        }
-    </script>
+		<!-- Google Analytics -->
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-
-    <script>
-		$(function() {
-		  $('.scrollArrow a').click(function() {
-		    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-		      var target = $(this.hash);
-		      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-		      if (target.length) {
-		        $('html,body').animate({
-		          scrollTop: target.offset().top
-		        }, 1000);
-		        return false;
-		      }
-		    }
-		  });
-		});
-    </script>
-
-    <!-- video -->
-    <script>
-    	if(site.isMobile()){
-			$('video *').hide();
-			$('video img').show();
-		}
-	</script>
-	
-	<!-- twitter -->
-	<script type="text/javascript">
-		window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
-	</script>
-
-	<!-- Google Analytics -->
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-	  ga('create', 'UA-38568235-6', 'auto');
-	  ga('send', 'pageview');
-	</script>
-
+		  ga('create', 'UA-38568235-6', 'auto');
+		  ga('send', 'pageview');
+		</script>
 	</body>
 </html>
+

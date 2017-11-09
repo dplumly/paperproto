@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url(http://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise|Open+Sans:400,300,800,700);
+@import url(https://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise|Open+Sans:400,300,800,700);
 
 /*  SOURCE ICON FONT = @import url(http://weloveiconfonts.com/api/?family=entypo); */
 @charset "UTF-8";
@@ -34,172 +34,146 @@ body {
     overflow-x: hidden
 }
 
-::-webkit-scrollbar {
-    display: none
-}
+::-webkit-scrollbar { display: none }
 
-[class*="entypo-"]:before {
-    font-family: 'entypo', sans-serif
-}
-
-*,
-:after,
-:before {
+*, :after, :before {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box
 }
 
-li {
-    list-style: none
+li { list-style: none }
+
+a { text-decoration: none; outline: none!important }
+
+h1, h2, h3, h4, h5, h6, p { font-family: 'Open Sans', sans-serif; color: #fff }
+
+.clearfix:before, .clearfix:after { content: ''; display: table }
+
+.clearfix:after { clear: both }
+
+
+/*===========================
+
+DOWNLOAD NAV
+
+===========================*/
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed; 
+    z-index: 2; 
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0, 0.9); 
+    overflow-x: hidden; 
+    transition: 0.5s; 
 }
 
-a {
-    text-decoration: none;
-    outline: none!important
+.overlay-content {
+    position: relative;
+    top: 25%; 
+    width: 100%; 
+    text-align: center; 
+    margin-top: 30px; 
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
+#menuContent { width: 540px; margin: 80px auto 0 auto; }
+#menuContent li { margin: 20px 0; }
+
+ul#android { float: right; padding-right: 50px; }
+ul#android h2 { 
     font-family: 'Open Sans', sans-serif;
-    color: #fff
+    font-weight: 400;
+    font-size: 25px;
+    letter-spacing: 4px;
+    line-height: 22px;
+    text-align: center; 
 }
 
-*,
-:after,
-:before {
-    box-sizing: border-box
-}
+ul#iPhone { float: left; padding-left: 50px; }
+ul#iPhone h2 { 
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    letter-spacing: 4px;
+    line-height: 22px;
+    text-align: center; }
 
-.clearfix:before,
-.clearfix:after {
-    content: '';
-    display: table
-}
-
-.clearfix:after {
-    clear: both
-}
-
-.wrapper-dropdown-2 {
-    /* Size and position */
-    position: relative; /* Enable absolute positionning for children and pseudo elements */
-
-    /* Styles */
-    margin-right: 15px;
-    cursor: pointer;
-    float: left;
-    width: 157px;
+.overlay a {
+    padding: 8px;
     text-decoration: none;
-    border: 2px solid white;
+    color: #818181;
+    display: block; 
+    transition: 0.3s; 
+}
+
+a.model {
+    width: 192px;
+    text-decoration: none;
+    border: 2px solid #fff;
+    background-color: rgba(255, 255, 255, 0.18);
+    border-radius: 2px;
     padding: 14px;
     background-color: transparent;
-    color: white;
+    color: #fff;
     font-weight: 100;
-    letter-spacing: 2px;
-    outline: none !important;
-    -webkit-transition:All .2s ease;
-    -moz-transition:All .2s ease;
-    -o-transition:All .2s ease;
+    letter-spacing: 4px;
+    margin: 0 auto;
+    outline: none!important;
+    cursor: pointer;
+    -webkit-transition: All .2s ease;
+    -moz-transition: All .2s ease;
+    -o-transition: All .2s ease;
+    text-align: center;
 }
 
-.wrapper-dropdown-2:hover {
+a.model:hover {
+    border: 2px solid #fff;
+    padding: 14px;
     background-color: #fff;
-    color: #000;
+    color: #000!important;
+    font-weight: 100;
+    letter-spacing: 4px;
+    margin: 0 auto;
 }
 
-.wrapper-dropdown-2:after {
-    content: "";
-    width: 0;
-    height: 0;
+
+.overlay a:hover, .overlay a:focus { color: #f1f1f1; }
+
+.overlay .closebtn {
     position: absolute;
-    right: 11px;
-    top: 50%;
-    margin-top: -3px;
-    border-width: 6px 6px 0 6px;
-    border-style: solid;
-    border-color: #fff transparent;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+/*
+.closebtn {
+    opacity: 1;
+    transition: opacity 0.3s;
+    -webkit-transition: opacity 0.3s;
+    -moz-transition: opacity 0.3s;
 }
 
-.wrapper-dropdown-2:hover:after{
-    content: "";
-    width: 0;
-    height: 0;
-    position: absolute;
-    right: 11px;
-    top: 50%;
-    margin-top: -3px;
-    border-width: 6px 6px 0 6px;
-    border-style: solid;
-    border-color: #000 transparent;
+.closebtn {
+    opacity: .2;
+}
+*/
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
 }
 
-.wrapper-dropdown-2 .dropdown {
-    position: absolute;
-    left: -2px;
-    right: 0;
-    background: white;
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -ms-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
-    list-style: none;
-    opacity: 0;
-    pointer-events: none;
-    width: 157px;
-}
+/*===========================
 
-.wrapper-dropdown-2 .dropdown li a {
-    display: block;
-    text-decoration: none;
-    color: #333;
-    padding: 5px;
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -ms-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
-}
+LANDING
 
-ul.dropdown { padding: 0; }
-ul.dropdown li { width: 157px; }
-
-
-.wrapper-dropdown-2 .dropdown li i {
-    margin-right: 5px;
-    color: inherit;
-    vertical-align: middle;
-}
-
-/* Hover state */
-
-.wrapper-dropdown-2 .dropdown li:hover a { background-color: #AFAFAF; }
-
-/* Active state */
-
-.wrapper-dropdown-2.active:after { border-width: 0 6px 6px 6px; }
-
-.wrapper-dropdown-2.active .dropdown { opacity: 1; pointer-events: auto; }
-
-/* No CSS3 support */
-
-.no-opacity       .wrapper-dropdown-2 .dropdown,
-.no-pointerevents .wrapper-dropdown-2 .dropdown {
-    display: none;
-    opacity: 1; /* If opacity support but no pointer-events support */
-    pointer-events: auto; /* If pointer-events support but no pointer-events support */
-}
-
-.no-opacity       .wrapper-dropdown-2.active .dropdown,
-.no-pointerevents .wrapper-dropdown-2.active .dropdown {
-    display: block;
-}
+===========================*/
 
 #landing {
     position: relative;
@@ -228,9 +202,7 @@ video {
     background-size: cover
 }
 
-.mobileImage {
-    display: none
-}
+.mobileImage { display: none }
 
 h1 {
     margin: 0 auto;
@@ -247,6 +219,40 @@ h1 span {
     font-weight: 700;
     letter-spacing: 2px
 }
+
+.buttonDefinitions {
+    width: 157px;
+    text-decoration: none;
+    border: 2px solid #fff;
+    background-color: rgba(255, 255, 255, 0.18);
+    border-radius: 2px;
+    padding: 14px;
+    background-color: transparent;
+    color: #fff;
+    font-weight: 100;
+    letter-spacing: 4px;
+    margin: 0 auto;
+    outline: none!important;
+    display: table-cell;
+    cursor: pointer;
+    -webkit-transition: All .2s ease;
+    -moz-transition: All .2s ease;
+    -o-transition: All .2s ease
+}
+
+.buttonDefinitions:hover {
+    border: 2px solid #fff;
+    padding: 14px;
+    background-color: #fff;
+    color: #000;
+    font-weight: 100;
+    letter-spacing: 4px;
+    margin: 0 auto
+}
+
+a#buyButton { margin-left: 20px; }
+
+
 
 button {
     width: 157px;
@@ -293,10 +299,7 @@ p a:hover {
     border-bottom: 1px solid #fff
 }
 
-#landingContent {
-    margin: 160px auto;
-    clear: both
-}
+#landingContent { margin: 160px auto; clear: both }
 
 #landingContent p {
     font-weight: 400;
@@ -305,11 +308,14 @@ p a:hover {
     margin-right: 15%
 }
 
-.buttons {
-    margin: 20px auto;
-    display: table
-}
+.buttons { margin: 0px auto; display: table }
 
+
+/*===========================
+
+ABOUT
+
+===========================*/
 #about {
     position: relative;
     height: auto;
@@ -321,10 +327,7 @@ p a:hover {
     -moz-osx-font-smoothing: grayscale
 }
 
-#about img {
-    display: block;
-    margin: auto
-}
+#about img { display: block; margin: auto }
 
 #about h4 {
     color: #000;
@@ -347,9 +350,7 @@ p a:hover {
     padding: 0 40px
 }
 
-#aboutContent {
-    padding-top: 122px
-}
+#aboutContent { padding-top: 122px }
 
 #arrowDownAbout {
     bottom: 20px;
@@ -357,6 +358,12 @@ p a:hover {
     left: 0;
     right: 0
 }
+
+/*===========================
+
+INSTRUCTIONS
+
+===========================*/
 
 #instructionsContainer {
     background: url(../img/instructions/instructionsBG7.jpg) no-repeat center;
@@ -378,15 +385,9 @@ p a:hover {
     top: 100px
 }
 
-#top {
-    position: absolute;
-    top: 10px
-}
+#top { position: absolute; top: 10px }
 
-#left {
-    position: absolute;
-    top: 71px
-}
+#left { position: absolute; top: 71px }
 
 #right {
     position: absolute;
@@ -394,10 +395,7 @@ p a:hover {
     left: 225px
 }
 
-#bottom {
-    position: absolute;
-    top: 430px
-}
+#bottom { position: absolute; top: 430px }
 
 #paper {
     position: relative;
@@ -414,8 +412,7 @@ p a:hover {
     background-image: url(../img/backgrounds/bg1.png)
 }
 
-#steps h2,
-#steps p {
+#steps h2, #steps p {
     font-family: 'Waiting for the Sunrise', cursive;
     color: #333;
     line-height: 1.4
@@ -429,10 +426,7 @@ p a:hover {
     -o-transition: All .4s ease
 }
 
-#steps p a:hover {
-    color: #fff;
-    background-color: #333
-}
+#steps p a:hover { color: #fff; background-color: #333 }
 
 hr {
     position: relative;
@@ -446,24 +440,11 @@ hr {
     padding: 0
 }
 
-#section1,
-#section2,
-#section3,
-#section4 {
-    margin: 60px 0
-}
+#section1, #section2, #section3, #section4 { margin: 60px 0 }
 
-#section5 h3,
-#section5 p {
-    visibility: hidden
-}
+#section5 h3, #section5 p { visibility: hidden }
 
-section#section1,
-section#section2,
-section#section3,
-section#section4 {
-    height: 700px
-}
+section#section1, section#section2, section#section3, section#section4 { height: 700px }
 
 #tab {
     height: 100px;
@@ -487,9 +468,14 @@ section#section4 {
     outline: none!important
 }
 
-#nav li {
-    margin-bottom: 10px
-}
+#nav li { margin-bottom: 10px }
+
+
+/*===========================
+
+FOOTER
+
+===========================*/
 
 footer {
     width: 100%;
@@ -516,9 +502,7 @@ footer p {
     -o-transition: All .4s ease
 }
 
-footer p a {
-    border: none
-}
+footer p a { border: none }
 
 footer p a:hover {
     text-decoration: none;
@@ -543,17 +527,11 @@ footer h3 span:hover {
     border-bottom: 1px solid #fff
 }
 
-footer section {
-    margin-top: 100px
-}
+footer section { margin-top: 100px }
 
-footer ul {
-    padding: 0
-}
+footer ul { padding: 0 }
 
-footer ul a {
-    color: #fff
-}
+footer ul a { color: #fff }
 
 footer ul li {
     color: #fff;
@@ -567,13 +545,9 @@ footer ul li {
     -o-transition: All .2s ease
 }
 
-footer ul li:hover {
-    opacity: .4
-}
+footer ul li:hover { opacity: .4 }
 
-footer .buttons {
-    margin-top: 122px
-}
+footer .buttons { margin-top: 122px }
 
 .copyright {
     text-align: center;
@@ -582,61 +556,35 @@ footer .buttons {
     padding-bottom: 20px
 }
 
-.copyright a span {
-    text-transform: uppercase;
-    font-weight: 700
-}
+.copyright a span { text-transform: uppercase; font-weight: 700 }
 
-#dd2.wrapper-dropdown-2 li {
-    font-size: 1em
-}
+#dd2.wrapper-dropdown-2 li { font-size: 1em }
 
-#dd2 ul li {
-    display: inline-block;
-    padding: 0
-}
+#dd2 ul li { display: inline-block; padding: 0 }
 
-#dd2 ul li:hover {
-    opacity: 1
-}
+#dd2 ul li:hover { opacity: 1 }
 
 @media only screen and (max-width: 1444px) {
-    #landingContent {
-        margin: 115px auto
-    }
-    #landingArrow {
-        bottom: 0
-    }
+    #landingContent { margin: 115px auto }
+    #landingArrow { bottom: 0 }
 }
 
 @media only screen and (min-height: 1024px) {
-    #landingContent {
-        margin: 300px auto
-    }
+    #landingContent { margin: 300px auto }
 }
 
 @media only screen and (max-width: 1024px) {
-    #landingContent {
-        margin: 115px auto
-    }
-    #landingArrow {
-        bottom: 0
-    }
-    #aboutContent {
-        padding-top: 110px
-    }
+    #landingContent { margin: 115px auto }
+    #landingArrow { bottom: 0 }
+    #aboutContent { padding-top: 110px }
 }
 
 @media only screen and (min-width: 769px) {
-    footer .six.columns {
-        left: 20px
-    }
+    footer .six.columns { left: 20px }
 }
 
 @media only screen and (max-width: 850px) {
-    #aboutContent {
-        padding-top: 60px
-    }
+    #aboutContent { padding-top: 60px }
     #landingContent section p {
         font-size: 20px;
         text-align: center;
@@ -646,9 +594,7 @@ footer .buttons {
 }
 
 @media only screen and (max-width: 769px) {
-    h1 {
-        font-size: 4em
-    }
+    h1 { font-size: 4em }
     .arrow {
         width: 2%;
         display: block;
@@ -656,49 +602,23 @@ footer .buttons {
         margin: auto;
         top: 35%
     }
-    #content {
-        margin: 225px auto
-    }
-    #landingArrow {
-        bottom: 0
-    }
-    .about {
-        padding-top: 2em
-    }
-    .about img {
-        width: 15%
-    }
-    .about p {
-        padding-left: 8%;
-        padding-right: 8%
-    }
-    #nav {
-        top: -500px!important
-    }
-    footer h3 {
-        text-align: center;
-        margin-top: 30px
-    }
+    #content { margin: 225px auto }
+    #landingArrow { bottom: 0 }
+    .about { padding-top: 2em }
+    .about img { width: 15% }
+    .about p { padding-left: 8%; padding-right: 8% }
+    #nav { top: -500px!important }
+    footer h3 { text-align: center; margin-top: 30px }
     footer p {
         text-align: center;
         width: 80%;
         display: inherit;
         margin: 0 auto
     }
-    footer ul {
-        text-align: center;
-        padding-top: 0
-    }
-    .footer p {
-        margin-left: 8%;
-        margin-right: 8%
-    }
-    footer section {
-        margin-top: 50px
-    }
-    .arrowBlack {
-        display: none
-    }
+    footer ul { text-align: center padding-top: 0 }
+    .footer p { margin-left: 8%; margin-right: 8% }
+    footer section { margin-top: 50px }
+    .arrowBlack { display: none }
 }
 
 @media only screen and (max-height: 850px) {
@@ -742,8 +662,7 @@ footer .buttons {
         background-image: url(../img/backgrounds/bg1.png);
         width: 170px
     }
-    #steps h2,
-    #steps p {
+    #steps h2, #steps p {
         font-family: 'Waiting for the Sunrise', cursive;
         color: #333;
         line-height: 1.1
@@ -759,12 +678,7 @@ footer .buttons {
         color: #fff;
         background-color: #333
     }
-    #section1,
-    #section2,
-    #section3,
-    #section4 {
-        margin: 40px 0
-    }
+    #section1, #section2, #section3, #section4 { margin: 40px 0 }
     #tab {
         height: 75px;
         width: 75px;
@@ -795,48 +709,25 @@ footer .buttons {
         margin: auto;
         top: 35%
     }
-    #content {
-        margin: 165px auto
-    }
-    #about {
-        height: auto
-    }
-    .about img {
-        width: 15%
-    }
-    .about p {
-        padding-left: 8%;
-        padding-right: 8%
-    }
-    #aboutContent {
-        padding-top: 60px;
-        padding-bottom: 50px
-    }
-    #aboutContent div {
-        padding-bottom: 40px
-    }
-    footer .buttons {
-        margin-top: 20px
-    }
+    #content { margin: 165px auto }
+    #about { height: auto }
+    .about img { width: 15% }
+    .about p { padding-left: 8%; padding-right: 8% }
+    #aboutContent { padding-top: 60px; padding-bottom: 50px }
+    #aboutContent div { padding-bottom: 40px }
+    footer .buttons { margin-top: 20px }
 }
 
 @media only screen and (max-height: 750px) {
-    #landingContent {
-        margin: 70px auto
-    }
+    #landingContent { margin: 50px auto }
 }
 
 @media only screen and (max-width: 640px) {
-    #instructionsContainer {
-        display: none
-    }
+    #instructionsContainer, .buttons { display: none }
 }
 
 @media only screen and (max-width: 460px) {
-    #landing {
-        height: auto;
-        min-height: 490px
-    }
+    #landing { height: auto; min-height: 490px }
     video {
         display: none;
         min-width: 100%;
@@ -856,30 +747,14 @@ footer .buttons {
         background-size: cover;
         display: inline
     }
-    .social {
-        margin-top: 15px
-    }
-    #landingContent {
-        margin: 70px 0 0
-    }
-    #dd.wrapper-dropdown-2, 
-    #dd2.wrapper-dropdown-2 {
-    	 display: none; 
-    }
+    .social { margin-top: 15px }
+    #landingContent { margin: 70px 0 0 }
+    #dd.wrapper-dropdown-2, #dd2.wrapper-dropdown-2 { display: none;  }
 
-    h1 {
-        font-size: 2.5em
-    }
-    #about {
-        height: auto
-    }
-    .about {
-        padding-top: 3em
-    }
-    p {
-        font-size: 14px;
-        margin: 0
-    }
+    h1 { font-size: 2.5em }
+    #about { height: auto }
+    .about { padding-top: 3em }
+    p { font-size: 14px; margin: 0 }
     #landingContent section p {
         font-size: 16px;
         margin-left: 7%;
@@ -895,9 +770,7 @@ footer .buttons {
         left: 46%;
         bottom: -203%
     }
-    .footer p {
-        text-align: left
-    }
+    .footer p { text-align: left }
     #content section a button {
         margin-bottom: 12px;
         text-align: center;
@@ -909,7 +782,5 @@ footer .buttons {
         width: 100%;
         padding: 0 7%
     }
-    footer ul li {
-        font-size: 28px
-    }
+    footer ul li { font-size: 28px }
 }
